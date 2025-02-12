@@ -1,0 +1,133 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="./output.css" rel="stylesheet">
+</head>
+<body>
+
+    <div class="w-full h-[100vh] bg-[#F3F4F8] flex flex-col p-10">
+
+        <div class="w-full h-[10%]">
+            <Label class="text-[20px]">CRYPTOGRAPY AND NETWORK SECURITY</Label><br>
+            <Label class="text-[15px]">Three types of Cipher</Label>
+        </div>
+
+        <div class="w-full h-full flex justify-center gap-10">
+
+            <!-- Caesar Cipher -->
+         
+            <div class="w-full h-2/3 flex bg-white flex-col gap-5 p-10 border border-[#CECECE] overflow-auto">
+                <h1 class="w-full text-center text-[20px] font-semibold">CAESAR CIPHER</h1>
+                <div class="w-full flex gap-2 items-end">
+                    <label>Shift: </label>
+                    <input id="shift" type="number" class="border-[#B3B7BD] outline-none border-0 border-b-2 " min="1"/>
+                </div>
+                <div class="w-full">
+                    <label class="font-semibold">Encryption</label>
+                    <div class="w-full flex flex-col gap-2">
+                        <label>Plain Text</label>
+                        <input id="CEPlainText" type="text" class="p-2 rounded-[5px] outline-none shadow-inner shadow-gray-400"/>
+                    </div>
+                    <div class="w-full flex flex-col gap-2">
+                        <label>Cipher Text</label>
+                        <input readOnly id="CECipherText" type="text" class="p-2 rounded-[5px] outline-none shadow-inner shadow-gray-400"/>
+                    </div>
+                </div>
+                <div class="w-full">
+                <label class="font-semibold">Decryption</label>
+                    <div class="w-full flex flex-col gap-2">
+                        <label>Cipher Text</label>
+                        <input id="CDCipherText" type="text" class="p-2 rounded-[5px] outline-none shadow-inner shadow-gray-400"/>
+                    </div>
+                    <div class="w-full flex flex-col gap-2">
+                        <label>Plain Text</label>
+                        <input readOnly id="CDPlainText" type="text" class="p-2 rounded-[5px] outline-none shadow-inner shadow-gray-400"/>
+                    </div>
+                </div>
+            </div>
+    
+            <!-- Monoalphabetic Cipher -->  
+    
+            <div class="w-full h-2/3 flex bg-white flex-col gap-5 p-10 border border-[#CECECE] overflow-auto">
+                <h1 class="w-full text-center text-[20px] font-semibold">MONOALPHABETIC CIPHER</h1>
+                <div class="w-full flex flex-col gap-3">
+                    <div class="w-full flex gap-2 items-end">
+                        <label>Substitution Key: </label>
+                        <input type="text" id="substitution" class="border-[#B3B7BD] outline-none border-0 border-b-2 " min="26" max="26"/>
+                    </div>
+                    <div class="w-full">
+                        <label class="font-semibold">Encryption</label>
+                        <div class="w-full flex flex-col gap-2">
+                            <label>Plain Text</label>
+                            <input type="text" id="MEPlainText" class="p-2 rounded-[5px] outline-none shadow-inner shadow-gray-400"/>
+                        </div>
+                        <div class="w-full flex flex-col gap-2">
+                            <label>Cipher Text</label>
+                            <input readonly type="text" id="MECipherText" class="p-2 rounded-[5px] outline-none shadow-inner shadow-gray-400"/>
+                        </div>
+                    </div>
+                    <div class="w-full">
+                        <label class="font-semibold">Decryption</label>
+                        <div class="w-full flex flex-col gap-2">
+                            <label>Cipher Text</label>
+                            <input type="text" id="MDCipherText" class="p-2 rounded-[5px] outline-none shadow-inner shadow-gray-400"/>
+                        </div>
+                        <div class="w-full flex flex-col gap-2">
+                            <label >Plain Text</label>
+                            <input readonly type="text" id="MDPlainText" class="p-2 rounded-[5px] outline-none shadow-inner shadow-gray-400"/>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    
+            <!-- Playfair Cipher -->  
+    
+            <div class="w-full h-full flex bg-white flex-col p-10 border border-[#CECECE] overflow-auto">
+                <label class="w-full text-center font-semibold text-[20px]">PLAYFAIR CIPHER</label>
+                <div class="w-full h-full flex flex-col gap-3">
+                    <div class="w-full flex justify-center items-center p-6">
+                        <table id="grid" class="w-4/5 table-fixed text-center shadow-inner shadow-gray-400">
+                        </table>
+                    </div>
+                    <div class="w-full flex gap-2 items-end">
+                        <label>Keyword: </label>
+                        <input type="text" id="keyword" class="border-[#B3B7BD] outline-none border-0 border-b-2 " max="26"/>
+                    </div>
+                    <div class="w-full flex flex-col">
+                        <label class="font-semibold">Encryption</label>
+                        <div class="w-full flex flex-col gap-2">
+                            <label>Plain Text</label>
+                            <input type="text" id="PEPlainText" class="p-2 rounded-[5px] outline-none shadow-inner shadow-gray-400"/>
+                        </div>
+                        <div class="w-full flex flex-col gap-2">
+                            <label >Cipher Text</label>
+                            <input readonly type="text" id="PECipherText" class="p-2 rounded-[5px] outline-none shadow-inner shadow-gray-400"/>
+                        </div>
+                    </div>
+                    <div class="w-full flex flex-col">
+                        <label class="font-semibold">Decryption</label>
+                        <div class="w-full flex flex-col gap-2">
+                            <label>Cipher Text</label>
+                            <input type="text" id="PDCipherText" class="p-2 rounded-[5px] outline-none shadow-inner shadow-gray-400"/>
+                        </div>
+                        <div class="w-full flex flex-col gap-2">
+                            <label >Plain Text</label>
+                            <input readonly type="text" id="PDPlainText" class="p-2 rounded-[5px] outline-none shadow-inner shadow-gray-400"/>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    
+        </div>
+    </div>
+
+
+</body>
+
+<!-- scripts -->
+<script src="./caesar-cipher.js"></script>
+<script src="./monoalphabetic-cipher.js"></script>
+<script src="./playfair.js"></script>
+</html>
