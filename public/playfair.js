@@ -50,7 +50,7 @@ function playfairShiftText(text, operator){
         for(let i = 0; i < alphabetGrid.length; i++){
 
             // Check for letter J and convert to I
-            tempText = tempText.includes('J') ? tempText.substring(0, tempText.indexOf('J')) + 'I' + tempText.substring(tempText.indexOf('J') + 1) : tempText;
+            tempText = tempText.includes('J') ? tempText.replace(/J/g, 'I') : tempText;
 
             // Check for duplicates and convert second char to X
             tempText = tempText[1] === tempText[0] ? tempText.substring(0, 1) + 'X' + tempText.substring(2) : tempText;
